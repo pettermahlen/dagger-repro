@@ -1,0 +1,17 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm'
+}
+apply plugin: 'kotlin-kapt'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+
+    implementation project(':module')
+    kapt 'com.google.dagger:dagger-compiler:2.40.5'
+    implementation 'com.google.dagger:dagger:2.40.5'
+    implementation 'javax.inject:javax.inject:1'
+}

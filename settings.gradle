@@ -1,0 +1,5 @@
+rootProject.name = 'dagger-repro'
+include 'main'
+include 'library'
+include 'module'
+
