@@ -3,7 +3,6 @@
  */
 import dagger.Module
 import dagger.Provides
-import foo.Baz
 import foo.Foo
 import javax.inject.Singleton
 
@@ -11,11 +10,11 @@ import javax.inject.Singleton
 class SomeModule {
     @Provides
     @Singleton
-    fun provideFoo() : Foo<Baz> = Foo()
+    fun provideFoo(): Foo<String> = Foo()
 
     @Provides
     @Singleton
-    fun provideBar(foo: Foo<Baz>) = Bar(foo)
+    fun provideBar(foo: Foo<String>) = Bar()
 }
 
-class Bar(val value: Any)
+class Bar()
